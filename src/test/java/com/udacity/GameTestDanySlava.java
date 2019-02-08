@@ -22,8 +22,11 @@ public class GameTestDanySlava {
         Game game = new Game();
         char[][] grid = {
                 {'-', '-', '-'},
+                {'x', 'x', 'x'},
+                {'-', '-', '-'},
         };
-        assertEquals("None", game.checkGameWinner(grid));
+        assertEquals("X wins", game.checkGameWinner(grid));
 
     }
+    
 }
