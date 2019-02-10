@@ -230,7 +230,20 @@ public class GameTestDanySlava {
         };
         assertEquals("O wins", game.checkGameWinner(grid));
 
+
     }
 
+    @Test
+    public void tie() {
+        Game game = new Game();
+        char[][] grid = {
+                {'o', 'x', 'x'},
+                {'x', 'o', 'o'},
+                {'o', 'o', 'x'},
 
+        };
+        assertEquals("Tie", game.checkGameWinner(grid));
+
+
+    }
 }
