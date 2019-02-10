@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class GameTestDanySlava {
+public class GameTestDanySlava<assertEquals> {
 
     @Test
     public void emptyBoard() {
@@ -28,5 +28,188 @@ public class GameTestDanySlava {
         assertEquals("X wins", game.checkGameWinner(grid));
 
     }
-    
+
+    @Test
+    public void xWinsCase2(){
+        Game game = new Game();
+        char[][] grid ={
+                {'x', 'x', 'x'},
+                {'-', '-', '-'},
+                {'-', '-', '-'},
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void xWinsCase3(){
+        Game game = new Game ();
+        char [][] grid ={
+                {'-', '-', '-'},
+                {'-', '-', '-'},
+                {'x', 'x', 'x'},
+
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void xWinsCase4() {
+        Game game = new Game();
+        char[][] grid = {
+                {'x', '-', '-'},
+                {'x', '-', '-'},
+                {'x', '-', '-'},
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+    }
+
+    @Test
+    public void xWinsCase5(){
+        Game game = new Game();
+        char [][] grid ={
+                {'-', 'x', '-'},
+                {'-', 'x', '-'},
+                {'-', 'x', '-'},
+
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+    }
+
+    @Test
+    public void xWinsCase6(){
+        Game game = new Game();
+        char [][] grid = {
+                {'-', '-', 'x'},
+                {'-', '-', 'x'},
+                {'-', '-', 'x'},
+
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+    }
+
+    @Test
+    public void xWinsCase7(){
+        Game game = new Game ();
+        char [][] grid = {
+                {'x', '-', '-'},
+                {'-', 'x', '-'},
+                {'-', '-', 'x'},
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void xWinsCase8() {
+        Game game = new Game();
+        char[][] grid = {
+                {'-', '-', 'x'},
+                {'-', 'x', '-'},
+                {'x', '-', '-'},
+
+        };
+        assertEquals("X wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void oWins() {
+        Game game = new Game();
+        char[][] grid = {
+                {'-', '-', '-'},
+                {'o', 'o', 'o'},
+                {'-', '-', '-'},
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void oWinsCase2(){
+        Game game = new Game();
+        char[][] grid ={
+                {'o', 'o', 'o'},
+                {'-', '-', '-'},
+                {'-', '-', '-'},
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void oWinsCase3(){
+        Game game = new Game ();
+        char [][] grid ={
+                {'-', '-', '-'},
+                {'-', '-', '-'},
+                {'o', 'o', 'o'},
+
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void oWinsCase4() {
+        Game game = new Game();
+        char[][] grid = {
+                {'o', '-', '-'},
+                {'o', '-', '-'},
+                {'o', '-', '-'},
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+    }
+
+    @Test
+    public void oWinsCase5(){
+        Game game = new Game();
+        char [][] grid ={
+                {'-', 'o', '-'},
+                {'-', 'o', '-'},
+                {'-', 'o', '-'},
+
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+    }
+
+    @Test
+    public void oWinsCase6(){
+        Game game = new Game();
+        char [][] grid = {
+                {'-', '-', 'o'},
+                {'-', '-', 'o'},
+                {'-', '-', 'o'},
+
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+    }
+
+    @Test
+    public void oWinsCase7(){
+        Game game = new Game ();
+        char [][] grid = {
+                {'o', '-', '-'},
+                {'-', 'o', '-'},
+                {'-', '-', 'o'},
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+
+    }
+
+    @Test
+    public void oWinsCase8() {
+        Game game = new Game();
+        char[][] grid = {
+                {'-', '-', 'o'},
+                {'-', 'o', '-'},
+                {'o', '-', '-'},
+
+        };
+        assertEquals("O wins", game.checkGameWinner(grid));
+
+    }
+
+
 }
