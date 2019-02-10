@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class GameTestDanySlava<assertEquals> {
+public class GameTestDanySlava {
 
     @Test
     public void emptyBoard() {
@@ -27,6 +27,17 @@ public class GameTestDanySlava<assertEquals> {
         };
         assertEquals("X wins", game.checkGameWinner(grid));
 
+    }
+
+    @Test
+    public void None() {
+        Game game = new Game();
+        char[][] grid = {
+                {'-', '-', '-'},
+                {'o', 'x', 'x'},
+                {'-', '-', '-'},
+        };
+        assertEquals("None", game.checkGameWinner(grid));
     }
 
     @Test
@@ -66,6 +77,17 @@ public class GameTestDanySlava<assertEquals> {
     }
 
     @Test
+    public void noneCase2() {
+        Game game = new Game();
+        char[][] grid = {
+                {'o', '-', '-'},
+                {'x', '-', '-'},
+                {'x', '-', '-'},
+        };
+        assertEquals("None", game.checkGameWinner(grid));
+    }
+
+    @Test
     public void xWinsCase5(){
         Game game = new Game();
         char [][] grid ={
@@ -98,7 +120,6 @@ public class GameTestDanySlava<assertEquals> {
                 {'-', '-', 'x'},
         };
         assertEquals("X wins", game.checkGameWinner(grid));
-
     }
 
     @Test
